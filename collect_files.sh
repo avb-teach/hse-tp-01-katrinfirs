@@ -28,9 +28,9 @@ def collect_files(input_dir, output_dir, max_depth):
 max_depth = 1
 args = sys.argv[1:]
 
-if len(args) >= 2 and args[0] == "--max_depth":
-    max_depth = int(args[1])
-    args = args[2:]
+if len(args) >= 2:
+    max_depth = int(args[-1])
+    args = args[:-2]
 
 input_dir, output_dir = args
 
